@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice Page</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Habibi&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <main>
+        <div class="invoices-container">
+            <div class="income-expense-btn">
+                <h2>COMPANY</h2>
+                <div>
+                    <button>Invoice</button>
+                    <button>Expense</button>
+                </div>
+            </div>
+            <!-- MAIN PAGE BODY -->
+            <div class="income-body">
+                <div class="header-flex">
+                    <div class="radius">
+                        <i class="fa-solid fa-money-bill-trend-up" style="color: rgb(35, 171, 123);"></i>
+                    </div>
+                    <p>Income Tracker</p>
+                </div>
+                <div class="income-input">
+                    <form action="#" class="income-form">
+                        <p>Add New Income</p>
+                        <label for="incomeName">Income Name</label>
+                        <input type="text" name="incomeName" id="incomeName" placeholder="income name">
+                        <label for="amount">Amount</label>
+                        <input type="number" name="amount" id="amount" min="0" placeholder="amount">
+                        <br>
+                        <button type="submit" class="income-btn main-btn-style">+ Add Income</button>
+                    </form>
+                </div>
+                <!-- INCOME LIST -->
+                <div class="income-list">
+                    <div class="clear-all">
+                        <p>Income List</p>
+                        <button></button>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Income Name</th>
+                                <th>Amount</th>
+                                <th>Date Added </th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Business Income</td>
+                                <td>200</td>
+                                <td>10.05.2026</td>
+                                <td>
+                                    <div class="radius trash-bg"><i class="fa-solid fa-trash"
+                                            style="color: rgb(193, 11, 38);"></i></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Business Income</td>
+                                <td>200</td>
+                                <td>10.05.2026</td>
+                                <td>
+                                    <div class="radius trash-bg"><i class="fa-solid fa-trash"
+                                            style="color: rgb(193, 11, 38);"></i></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Business Income</td>
+                                <td>200</td>
+                                <td>10.05.2026</td>
+                                <td>
+                                    <div class="radius trash-bg"><i class="fa-solid fa-trash"
+                                            style="color: rgb(193, 11, 38);"></i></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Business Income</td>
+                                <td>200</td>
+                                <td>10.05.2026</td>
+                                <td>
+                                    <div class="radius trash-bg"><i class="fa-solid fa-trash"
+                                            style="color: rgb(193, 11, 38);"></i></div>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+            <!-- Total Income -->
+            <div class="total-income">
+                <div class="income-total-container">
+                    <div class="radius ">
+                        <i class="fa-solid fa-chart-line" style="color: rgb(21, 114, 213);"></i>
+                    </div>
+                    <div class="income-text">
+                        Total Income
+                    </div>
+                </div>
+                <div class="total">4,678.00 <span>AZN</span></div>
+            </div>
+        </div>
+    </main>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
