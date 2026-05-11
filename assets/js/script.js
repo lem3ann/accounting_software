@@ -57,16 +57,16 @@ function setLocalStorage(current) {
     localStorage.setItem("currentUser", current)
 }
 
-
 // =================================================== INCOME PAGE ==================================
 // income array structure
 /* arr=[{_id:29012993,incomeName:"Test","amount":43434,_userId:current}] */
-let incomeArr = [];
+let incomeArr = JSON.parse(localStorage.getItem("income")) || [];
 let incomeForm = document.querySelectorAll(".income-form")[0];
 let incomeName = document.getElementById("incomeName");
 let incomeAmount = document.getElementById("amount");
 const getCurrentUserId = JSON.parse(localStorage.getItem("currentUser"))._id;
 incomeForm.addEventListener("submit", function (event) {
+    incomeArr = []
     event.preventDefault();
     incomeArr.push({
         _id: Math.random(),
@@ -74,8 +74,10 @@ incomeForm.addEventListener("submit", function (event) {
         amount: incomeAmount.value,
         _userId: getCurrentUserId
     });
+    createTableRow(incomeArr);
     setLocalIncomeArr(JSON.stringify(incomeArr));
-
+    incomeName.value = "";
+    incomeAmount.value = "";
 
 })
 
@@ -86,7 +88,39 @@ function setLocalIncomeArr(arr) {
 // create table
 let table = document.getElementsByClassName("main-table")[0];
 
-function createTableRow(arr) {
-    let newRow = document.createElement("tr");
 
+let index = 1;
+// icmome arr verilecek 
+function createTableRow(arr) {
+    arr.forEach(element => {
+        let newRow = document.createElement("tr");
+        let dataId = document.createElement("td");
+        dataId.innerText = index;
+        let dataName = document.createElement("td");
+        dataName.innerText = element.incomeName;
+        let dataAmount = document.createElement("td");
+        dataAmount.innerText = element.amount
+        let dataTime = document.createElement("td");
+        dataTime.innerText = new Date();
+        let basket = document.createElement("td");
+        basket.innerHTML = ` <div class="radius trash-bg"><i class="fa-solid fa-trash"
+                                            style="color: rgb(193, 11, 38);"></i></div>`;
+        newRow.append(dataId, dataName, dataAmount, dataTime, basket);
+        table.append(newRow);
+    });
+
+}
+
+// ========================================= MAIN PAGE NAVTABS =========================================
+let allbtns = document.querySelectorAll(".tabs");
+let allContent = document.querySelectorAll(".tabContent");
+for (let j = 0; j < allbtns.length; j++) {
+    allbtns[j].addEventListener("click", function () {
+        for (let i = 0; i < allbtns.length; i++) {
+            allbtns[i].classList.remove("btn-main-bg");
+            allContent[i].style.display = "none";
+        }
+        allbtns[j].classList.add("btn-main-bg");
+        allContent[j].style.display = "block";
+    })
 }
