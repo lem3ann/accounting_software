@@ -49,9 +49,14 @@ a {
 
 .main-btn-style {
     margin-top: 15px;
-    border: 1px solid grey;
+    border: none;
     padding: 8px;
     border-radius: 5px;
+    transition: all .5s;
+}
+.main-btn-style:hover{
+    opacity: 0.9;
+    outline: 4px solid #54aaad;
 }
 
 .submit:hover {
@@ -131,6 +136,17 @@ a {
 
 .income-form input {
     font-size: 16px;
+    padding: 5px;
+    border: 1px solid rgb(242, 239, 239);
+    border-radius: 8px;
+}
+.expense-form p{
+ padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+.expense-form input{
+     font-size: 16px;
     padding: 5px;
     border: 1px solid rgb(242, 239, 239);
     border-radius: 8px;
