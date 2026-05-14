@@ -228,85 +228,85 @@ logoutBtn.addEventListener("click", function () {
 let expenseArr = [{
         _id: Math.floor(Math.random() * 10),
         transaction: "Business",
-        amount: "2323",
+        amount: "21",
         userId: "0.2227517522217807"
     },
     {
         _id: Math.floor(Math.random() * 10),
         transaction: "salary",
-        amount: "2323",
+        amount: "98",
         userId: "0.8627517565817807"
     },
     {
         _id: Math.floor(Math.random() * 10),
         transaction: "Profit ",
-        amount: "2323",
+        amount: "49",
         userId: "0.2227517522217807"
     },
     {
         _id: Math.floor(Math.random() * 10),
         transaction: "Earned",
-        amount: "2323",
+        amount: "90",
         userId: "0.2227517522217807"
     },
     {
         _id: Math.floor(Math.random() * 10),
         transaction: "businnes expense",
-        amount: "2323",
+        amount: "70",
         userId: "0.2227517522217807"
     },
     {
         _id: Math.floor(Math.random() * 10),
         transaction: "income",
-        amount: "2323",
+        amount: "50",
         userId: "0.4716810936934336"
     },
     {
         _id: Math.floor(Math.random() * 10),
         transaction: "income -Ayla",
-        amount: "2323",
+        amount: "90",
         userId: "0.20055668015534123"
     },
     {
         _id: Math.floor(Math.random() * 10),
         transaction: "capital",
-        amount: "2323",
+        amount: "30",
         userId: "0.8716810936434336"
     },
     {
         _id: Math.floor(Math.random() * 10),
         transaction: "salary",
-        amount: "2323",
+        amount: "20",
         userId: "0.8716810936434336"
     },
     {
         _id: Math.floor(Math.random() * 10),
         transaction: "active",
-        amount: "2323",
+        amount: "10",
         userId: "0.8627517565817807"
     },
     {
         _id: Math.floor(Math.random() * 10),
         transaction: "expense -Jala",
-        amount: "2323",
+        amount: "499",
         userId: "0.1485515983574851"
     },
     {
         _id: Math.floor(Math.random() * 10),
         transaction: "expense -Jala -v1",
-        amount: "2323",
+        amount: "150.50",
         userId: "0.1485515983574851"
     },
     {
         _id: Math.floor(Math.random() * 10),
         transaction: "expense -Jala-business",
-        amount: "2323",
+        amount: "2000",
         userId: "0.1485515983574851"
     },
     {
         _id: Math.floor(Math.random() * 10),
         transaction: "expense -Jala ->salary",
-        amount: "2323",
+        amount: "100",
         userId: "0.1485515983574851"
     }
 ];
@@ -359,12 +359,17 @@ function createTableRow(arr, z) {
 
 
 // ======================================= TOTAL INCOME =======================================================
+let totalSumIncome = document.getElementsByClassName("total")[0];
+let totalSumExpense = document.getElementsByClassName("total")[1];
+
 function sumAmount(array) {
     let sumOfAmount = 0;
     array.map((element) => {
-        sumOfAmount += `${element.amount}`;
+        sumOfAmount += parseFloat(element.amount);
     });
+    totalSumIncome.textContent = `${sumOfAmount}` + ` AZN`;
+    totalSumExpense.textContent = `${sumOfAmount}` + ` AZN`;
     return sumOfAmount;
 }
-let cem = sumAmount(expenseArr);
-console.log(cem);
+sumAmount(incomeArr);
+sumAmount(expenseArr);
