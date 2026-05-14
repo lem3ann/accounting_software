@@ -263,3 +263,13 @@ function createTableRow(arr) {
 console.log(expenseArr);
 expenseArr = expenseArr.filter((x) => x.userId == getCurrentUserId);
 createTableRow(expenseArr);
+// ======================================= TOTAL INCOME =======================================================
+function sumAmount(array) {
+  let sumOfAmount = 0;
+  array.map((element) => {
+    sumOfAmount += `${element.amount}`;
+  });
+  return sumAmount;
+}
+let cem = sumAmount(expenseArr);
+console.log(cem);
