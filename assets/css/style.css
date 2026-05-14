@@ -30,9 +30,10 @@ a {
 }
 
 .form {
-    border: 5px solid red;
+    border: 5px solid rgb(46, 90, 103);
     padding: 30px;
     border-radius: 15px;
+    width: 600px;
 }
 
 .form input {
@@ -41,6 +42,8 @@ a {
     padding: 6px;
     border-color: chocolate;
 }
+
+
 
 .submit {
     background-color: rgb(164, 164, 237);
@@ -54,7 +57,8 @@ a {
     border-radius: 5px;
     transition: all .5s;
 }
-.main-btn-style:hover{
+
+.main-btn-style:hover {
     opacity: 0.9;
     outline: 4px solid #54aaad;
 }
@@ -140,13 +144,15 @@ a {
     border: 1px solid rgb(242, 239, 239);
     border-radius: 8px;
 }
-.expense-form p{
- padding: 15px 0;
+
+.expense-form p {
+    padding: 15px 0;
     font-size: 18px;
     font-weight: 600;
 }
-.expense-form input{
-     font-size: 16px;
+
+.expense-form input {
+    font-size: 16px;
     padding: 5px;
     border: 1px solid rgb(242, 239, 239);
     border-radius: 8px;
@@ -244,11 +250,24 @@ table th {
 .display-content {
     display: none;
 }
-.logout{
+
+.logout {
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
-.logout:hover{
+
+.logout:hover {
     cursor: pointer;
+}
+
+.gif {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gif img {
+    width: 500px;
+    height: 500px;
 }
