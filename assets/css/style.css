@@ -244,3 +244,11 @@ table th {
 .display-content {
     display: none;
 }
+.logout{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.logout:hover{
+    cursor: pointer;
+}
